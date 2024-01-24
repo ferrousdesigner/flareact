@@ -1,0 +1,23 @@
+.bump {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--neo-shadows);
+  margin: 1rem 1rem;
+  margin-bottom: 2rem;
+}
+.bump-card {
+  padding: 1rem;
+}
+
+.anti-bump {
+  box-shadow: var(--neo-shadows-reverse);
+}
+@media only screen and (max-width: 600px) {
+  .bump {
+    margin: 3rem 0;
+  }
+  .bump-card {
+    padding: 0rem;
+    box-shadow: none;
+  }
+}

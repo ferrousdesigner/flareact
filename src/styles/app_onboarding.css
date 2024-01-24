@@ -1,0 +1,62 @@
+.mobile-app-container {
+  max-height: 100vh;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--main-background-color);
+}
+.mobile-app-container .image-container,
+.mobile-app-container .data-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--main-background-color);
+}
+.mobile-app-container .image-container {
+  padding-top: 20%;
+}
+.mobile-app-container .data-container {
+  justify-content: flex-start;
+  padding-top: 40%;
+}
+.image-container img {
+  object-fit: contain;
+  /* background: #252525; */
+  /* padding: 1rem; */
+  /* border-radius: 12rem; */
+  width: 57%;
+}
+.image-container.logo img {
+  border: none;
+}
+.image-container.logo {
+}
+.animate-image {
+  animation: img-zoom 0.5s ease-in-out forwards;
+}
+
+.glow-logo {
+  animation: glow 3s ease-in infinite;
+}
+@keyframes glow {
+  from {
+    fill: white;
+  }
+  50% {
+    fill: #666;
+  }
+  to {
+    fill: white;
+  }
+}
+@keyframes img-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}

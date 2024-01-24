@@ -1,0 +1,143 @@
+.small-layout {
+  position: relative;
+  margin: 3rem 0;
+}
+
+.small-layout h2 {
+  margin-bottom: 2rem;
+}
+
+.small-layout > div {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--radius);
+  position: relative;
+  background-color: var(--theme-color);
+  overflow: hidden;
+  box-shadow: 0 0 1rem 1rem transparent;
+}
+.small-layout button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(1rem);
+  /* backdrop-filter: blur(1rem); */
+  color: var(--white);
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  font-size: 12px;
+  border: none;
+  background: #00000070;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 111;
+}
+.small-layout.selected > div {
+  box-shadow: 0 0 0rem 1rem var(--main-font-color);
+}
+.small-layout > div:hover {
+  box-shadow: 0 0 0rem 1rem var(--main-font-color);
+}
+.small-layout .default {
+  background-color: var(--theme-color);
+}
+.small-layout .default div {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  border-radius: var(--radius);
+  left: 0;
+  top: 0;
+}
+
+.small-layout .default::after {
+  width: 55%;
+  height: 60%;
+  position: absolute;
+  right: -10%;
+  top: 20%;
+  border-radius: var(--radius);
+  content: "";
+  background: var(--main-background-color);
+}
+.small-layout .upfront {
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  border-radius: var(--radius);
+  left: 20%;
+  bottom: -10%;
+  background: var(--main-background-color);
+}
+
+.small-layout .trident {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg) translateY(-70%);
+  position: absolute;
+  border-radius: var(--radius);
+  right: 0%;
+  top: 50%;
+  background: var(--main-background-color);
+}
+.small-layout .rounder {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg) translateY(-70%);
+  position: absolute;
+  border-radius: 50%;
+  right: 20%;
+  top: 50%;
+  background: var(--main-background-color);
+}
+.small-layout .elipse {
+  width: 300px;
+  height: 88px;
+  transform: rotate(136deg) translateY(-45%) translateX(-85%);
+  position: absolute;
+  border-radius: var(--radius);
+  right: 20%;
+  top: 59%;
+  background: var(--main-background-color);
+}
+.small-layout .minimal {
+  width: 78px;
+  height: 100%;
+  transform: rotate(-10deg);
+  position: absolute;
+  border-radius: var(--radius);
+  right: 6%;
+  top: 23%;
+  background: var(--main-background-color);
+}
+
+.small-layout .angledphone {
+  width: 67px;
+  height: 80%;
+  position: absolute;
+  border-radius: var(--radius);
+  left: 6%;
+  top: 10%;
+  background: var(--main-background-color);
+}
+
+.small-layout-tag {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  padding: 1rem 2rem;
+  color: var(--main-font-color);
+  border-radius: var(--radius);
+  font-weight: bold;
+  z-index: 1;
+  background: var(--main-background-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .small-layout > div {
+    width: 100%;
+  }
+}

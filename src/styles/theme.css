@@ -1,0 +1,561 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+
+:root {
+  font-size: 8px;
+}
+html {
+  /* overflow-x: hidden; */
+  color: var(--main-font-color);
+}
+.default {
+  --theme-color: #8843dc;
+  --theme-color-hover: #222;
+  --theme-color-2: #132432;
+  --theme-color-3: #7e8081;
+  --btn-shadow: #5a9eec;
+  --gold-gradient: linear-gradient(0deg, #034478, #33323100);
+  --black-gradient: linear-gradient(0deg, #333, #33323100);
+  --black-gradient-alt: linear-gradient(180deg, #333, #33323100);
+  --btn-color: #fff;
+  --easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --animation-time: 0.5s;
+  --font-one: "Open Sans", sans-serif;
+  --font-two: "Montserrat Condensed", sans-serif;
+  --radius: 0rem;
+  --button-height: 6rem;
+  --transition: all 0.5s ease;
+  --PhoneInputCountryFlag-height: 3rem;
+  --PhoneInputCountrySelectArrow-width: 1rem;
+}
+.theme-color {
+  color: var(--theme-color);
+}
+.__react_component_tooltip {
+  border-radius: var(--radius);
+  z-index: 3000 !important;
+}
+p {
+  line-height: 1.5;
+  font-size: 2rem;
+  color: var(--main-font-color);
+}
+.no-select {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.theme-dark {
+  --glass: #000000dd;
+  --skeleton-color: #55555533;
+  --gray: #161616;
+  --prime-card-background: #222222;
+  --prime-card-title: #fff;
+  --prime-card-subtitle: #aaa;
+  --input-background: #16181b;
+  --nav-color: #22222288;
+  --btn-gradient-color: #222;
+  --btn-gradient: #fff;
+  --jumbo-background: #171a1d;
+  --jumbo-background-blur: #181a1d;
+  --nav-btn: #171717b8;
+  --overlay-color: #111111dd;
+  --logo-color: #f5f5f5;
+  --translucent: #000000fe;
+  --main-font-color: #aaa;
+  --header-color: #f5f5f5;
+  --main-background-color: #0a0d0f;
+  --card-icon-background: #333;
+  --dialog-background: #1d2227aa;
+  --input-color: #555;
+  --glass-color: #00000088;
+  --border-color: #2a2c2d;
+  --input-color: #666;
+  --glass-button-color: #afafaf22;
+  --glass-button-font-color: #222;
+  --glass-button-color-hover: #f9f9f946;
+  --button-disabled-color: #111;
+  --placeholder-color: #444;
+  --button-border-color: #555;
+  --btn-disabled: #444;
+  --card-background: #171a1d;
+  --card-color: #333;
+  --card-color-2: #2b2b2b;
+  --card-shadow-color: #333;
+  --toggle-background: #555555;
+  --toggle-background-nob: #bbbbbb;
+  --button-font-color: #999;
+  --accent-button-font-color: #fff;
+  --accent-button-color: #444444;
+  --shadow-color: #000000aa;
+  --font-shadow-color: #000;
+  --profile-font-color: #fff;
+  --error-font-color: #ff0000;
+  --error-background-color: #ff000022;
+  --divider-color: #333;
+  --black: #222;
+  --white: #f8f8f8;
+  --light-black: #555;
+  --ques-ans-shadow-color: rgba(0, 0, 0, 0.4);
+  --gradient-light: #33333344;
+  --error-font-color: #a8000d;
+  --info-font-color: #005bd3;
+  --pink-color: #009688;
+  --success-font-color: #05a081;
+  --semi-back: rgba(0, 0, 0, 0.9);
+  --top-area-color: #222;
+  --neo-shadows: 0.3rem 0.3rem 1rem var(--shadow-color),
+    -0.3rem -0.3rem 1rem var(--card-shadow-color),
+    0rem 0rem 0rem var(--shadow-color) inset,
+    -0rem -0rem 0rem var(--card-shadow-color) inset;
+  --neo-shadows-reverse: 0rem -0rem 0rem var(--shadow-color),
+    0rem -0rem 0rem var(--card-shadow-color),
+    0.3rem 0.3rem 1rem var(--shadow-color) inset,
+    -0.3rem -0.3rem 1rem var(--card-shadow-color) inset;
+  --neo-line: 0.1rem 0.1rem 0.1rem var(--shadow-color),
+    -0.1rem -0.1rem 0.1rem var(--card-shadow-color),
+    0rem 0rem 0rem var(--shadow-color) inset,
+    -0rem -0rem 0rem var(--card-shadow-color) inset;
+  --neo-line-reverse: 0rem -0rem 0rem var(--shadow-color),
+    0rem -0rem 0rem var(--card-shadow-color),
+    0.1rem 0.1rem 0.1rem var(--shadow-color) inset,
+    -0.1rem -0.1rem 0.1rem var(--card-shadow-color) inset;
+  --card-background-green: #172719;
+  --card-background-blue: #204169;
+  --card-background-purple: #c8c9ff;
+  --card-background-orange: #282010;
+  --card-background-red: #330000;
+  --border-color-red: #edb9b9;
+  --card-background-red-dark: #ff000012;
+  --button-color: #fff;
+  --green: rgb(0, 144, 24);
+  --purple: rgb(100, 0, 194);
+  --blue: rgb(0, 105, 224);
+  --red: rgb(182, 9, 9);
+  --orange: rgb(144, 70, 0);
+  --light-green: rgba(0, 175, 29, 0.123);
+  --light-purple: rgba(100, 0, 194, 0.164);
+  --light-blue: rgba(0, 104, 224, 0.219);
+  --light-red: rgba(182, 9, 9, 0.246);
+  --light-orange: rgba(144, 70, 0, 0.226);
+  --sub-title-color: #dedede;
+  --description-color: #aaa;
+  --secondary-link-background: #333;
+  --iphone-frame-back: linear-gradient(145deg, #454545, #2a2a2a);
+  --iphone-frame-shadows: 20px 20px 50px #090909, -20px -20px 50px #3a3a3a;
+  --iphone-notch-color: #414141;
+  --btn-primary-shadow: 0 5px 20px 10px #fe97003b;
+  --filter: grayscale(1) brightness(1) invert(1);
+  --loader-color: #ffffff;
+}
+
+.theme-light {
+  --glass: #ffffffee;
+  --skeleton-color: #aaaaaa55;
+  --gray: #3c3c3c;
+  --prime-card-background: #222222;
+  --prime-card-title: #fff;
+  --prime-card-subtitle: #aaa;
+  --input-background: #f5f5f5;
+  --loader-color: #333333;
+  --btn-disabled: #999;
+  --nav-btn: #f7f7f7b8;
+  --nav-color: #ffffffee;
+  --btn-gradient-color: #fff;
+  --btn-gradient: #222;
+  /* --filter: grayscale(1) brightness(0.5); */
+  --jumbo-background: #f7f7f7;
+  --jumbo-background-blur: #f7f7f7ff;
+  --overlay-color: #eeeeee55;
+  --logo-color: #222;
+  --translucent: #fffffffe;
+  --main-font-color: #6d6d6d;
+  --header-color: #333333;
+  --main-background-color: #fff;
+  --card-icon-background: #66666622;
+  --dialog-background: #f7f7f7aa;
+  --input-color: #66666622;
+  --border-color: #ddd;
+  --glass-color: #ffffff88;
+  --glass-button-color: #11111155;
+  --glass-button-color-hover: #11111188;
+  --glass-button-font-color: #ddd;
+  --button-disabled-color: #888;
+  --placeholder-color: #aaa;
+  --card-color: #fff;
+  --card-color-2: #f5f5f5;
+  --card-shadow-color: #fff;
+  --toggle-background: #e5e5e5;
+  --toggle-background-nob: #bbbbbb;
+  --button-font-color: #888;
+  --accent-button-font-color: #fff;
+  --accent-button-color: #eeeeee;
+  --shadow-color: #00000022;
+  --profile-font-color: #fff;
+  --font-shadow-color: #11111155;
+  --error-font-color: #a8000d;
+  --info-font-color: #005bd3;
+  --success-font-color: #05a081;
+  --error-background-color: #ff000022;
+  --divider-color: #eee;
+  --black: #222;
+  --white: #f8f8f8;
+  --pink-color: #009688;
+  --light-black: #555;
+  --gradient-light: #ffffff44;
+  --semi-back: rgba(255, 255, 255, 0.9);
+  --ques-ans-shadow-color: rgba(0, 0, 0, 0);
+  --top-area-color: var(--theme-color);
+  --neo-shadows: 0.3rem 0.3rem 1rem var(--shadow-color),
+    -0.3rem -0.3rem 1rem var(--card-shadow-color),
+    0rem 0rem 0rem var(--shadow-color) inset,
+    -0rem -0rem 0rem var(--card-shadow-color) inset;
+  --neo-shadows-reverse: 0rem -0rem 0rem var(--shadow-color),
+    0rem -0rem 0rem var(--card-shadow-color),
+    0.3rem 0.3rem 1rem var(--shadow-color) inset,
+    -0.3rem -0.3rem 1rem var(--card-shadow-color) inset;
+  --neo-line: 0.1rem 0.1rem 0.1rem var(--shadow-color),
+    -0.1rem -0.1rem 0.1rem var(--card-shadow-color),
+    0rem 0rem 0rem var(--shadow-color) inset,
+    -0rem -0rem 0rem var(--card-shadow-color) inset;
+  --neo-line-reverse: 0rem -0rem 0rem var(--shadow-color),
+    0rem -0rem 0rem var(--card-shadow-color),
+    0.1rem 0.1rem 0.1rem var(--shadow-color) inset,
+    -0.1rem -0.1rem 0.1rem var(--card-shadow-color) inset;
+  --card-background: #f7f7f7;
+  --card-background-green: #cafed2;
+  --card-background-blue: #dfedff;
+  --card-background-purple: #c8c9ff;
+  --card-background-orange: #fbdfaa;
+  --card-background-red: #ffeaea;
+  --border-color-red: #edb9b9;
+  --card-background-red-dark: #ff000012;
+  --button-color: #fff;
+  --green: rgb(0, 144, 24);
+  --purple: rgb(100, 0, 194);
+  --blue: rgb(0, 105, 224);
+  --red: rgb(182, 9, 9);
+  --orange: rgb(144, 70, 0);
+  --light-green: rgba(0, 175, 29, 0.123);
+  --light-purple: rgba(100, 0, 194, 0.164);
+  --light-blue: rgba(0, 104, 224, 0.219);
+  --light-red: rgba(182, 9, 9, 0.246);
+  --light-orange: rgba(144, 70, 0, 0.226);
+  --sub-title-color: #888;
+  --description-color: #999;
+  --secondary-link-background: #eee;
+  --iphone-frame-back: linear-gradient(145deg, #f0f0f0, #cacaca);
+  --iphone-frame-shadows: 20px 20px 50px #bebebe, -20px -20px 50px #ffffff;
+  --iphone-notch-color: #eaeaea;
+  --btn-primary-shadow: 0 5px 20px 10px #fe97003b;
+}
+
+body {
+  color: var(--main-font-color);
+  font-size: 1.6rem;
+  font-family: var(--font-one);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 10rem;
+}
+.blur-content {
+  opacity: 0.1;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chip {
+  margin-left: 0.8rem;
+  background: var(--main-background-color);
+  border-radius: var(--radius);
+  color: var(--header-color);
+  padding: 1rem 2rem;
+  line-height: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: top;
+  text-transform: capitalize;
+  align-items: center;
+}
+textarea {
+  font-size: inherit;
+}
+.MuiPaper-root {
+  background-color: var(--card-background) !important;
+  border-radius: var(--radius) !important;
+}
+.MuiPaper-root ul {
+}
+.MuiPaper-root ul li {
+  font-size: 16px;
+}
+.main-content {
+  position: relative;
+  transition: all 0.2s ease;
+  z-index: 4;
+  padding: 8rem 0;
+}
+.ms-theme .ms-theme-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-background-color);
+  transition: all 0.2s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1);
+}
+.ms-theme .ms-theme-gradient {
+  position: relative;
+}
+.ms-theme .ms-theme-gradient::after {
+  content: "";
+  opacity: 0.99;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200vw;
+  height: 200vh;
+  z-index: -1;
+  /* animation: move-background 10s linear infinite; */
+  background: var(--main-background-color); /* fallback for old browsers */
+}
+
+.fileContainer .uploadPictureContainer {
+  padding: 0 !important;
+}
+.fileContainer .uploadPictureContainer > .uploadPicturesWrapper > div {
+  justify-content: flex-start;
+}
+.fileContainer .uploadPictureContainer {
+  border: none;
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+.fileContainer .uploadPictureContainer img.uploadPicture {
+  border-radius: var(--radius);
+  height: auto !important;
+  width: 100% !important;
+}
+.fileUploader .fileContainer .deleteImage {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  color: var(--white);
+  background: var(--theme-color);
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+.overflow-blur {
+  opacity: 0.05;
+  filter: grayscale(1);
+}
+@keyframes move-background {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  25% {
+    transform: translateX(-100vw) translateY(0%);
+  }
+  50% {
+    transform: translateX(-100vw) translateY(-100vh);
+  }
+  75% {
+    transform: translateX(0%) translateY(-100vh);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+.hide {
+  animation: hide 0.3s forwards;
+}
+.invisible {
+  display: none;
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.normal-pad {
+  /* padding: 0rem 10rem; */
+}
+
+.block-links {
+}
+.block-links a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.block-links a:last-child {
+  margin-right: 0;
+}
+
+.smooth,
+.smooth * {
+  transition: all 0.2s ease-out;
+}
+.container {
+  position: relative;
+  padding: 0 !important;
+}
+/* .better-container {
+  height: 50vw;
+  position: relative;
+  z-index: 1;
+  position: fixed !important;
+  left: 0;
+  width: 100%;
+  top: 0;
+} */
+
+.hide-on-desk {
+  display: none !important;
+}
+ul {
+  display: inline-block;
+  text-align: left;
+  margin-left: 15px;
+  cursor: default;
+}
+ul li {
+  margin: 6px 0;
+}
+.long-text {
+  text-align: left;
+  padding: 0;
+}
+.long-text h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.cart-product {
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  padding: 2rem 2rem 0 2rem;
+  margin: 0 0 5rem 0;
+  border-radius: var(--radius);
+}
+
+@-webkit-keyframes shine {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+.disappear {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.appear {
+  transition: all 0.5s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  p {
+    line-height: 1.5;
+    font-size: 2.5rem;
+    color: var(--main-font-color);
+  }
+  :root {
+    font-size: 8px;
+  }
+  .default {
+    --animation-time: 0.6s;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1270px) {
+  :root {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hide-on-phone {
+    display: none;
+  }
+  /* html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  } */
+
+  .normal-pad {
+    padding: 0rem 3rem;
+  }
+  body {
+    padding: 1rem 2rem;
+    padding-bottom: 22rem;
+    padding-top: 0rem;
+  }
+}

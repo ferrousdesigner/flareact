@@ -1,0 +1,26 @@
+.app-dots {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.app-dot {
+  width: 1rem;
+  height: 0.4rem;
+  border-radius: var(--radius);
+  margin: 0 0.2rem;
+  background-color: var(--main-font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+  transform: scaleX(0.8);
+  transition: all 0.4s ease-in-out;
+}
+.app-dot.active {
+  background-color: var(--theme-color);
+  opacity: 1;
+  transform: scaleX(1);
+}

@@ -1,0 +1,130 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+     match /{nodeEnv}/data/delivery_cities/{userStoreId}/data/{cityName} {
+      allow read: if true;
+      allow write: if request.auth.uid != null;
+    }
+   match /{nodeEnv}/data/user_stores/{userStoreId} {
+      allow read: if true;
+      allow write: if request.auth.uid != null;
+    }
+    match /{nodeEnv}/data/access_control_list/{userStoreId}/data/{aclID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/completedOrders/{userStoreId}/data/{orderID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/fcmTokens/{tokenNodeID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/generalQueries/{queryID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/orderQueries/{storeID}/data/{queryID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/orders/{storeID}/data/{orderID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/products/{storeID}/store_products/{productID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/returnOrders/{storeID}/data/{orderID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/user_stores/{storeID}/categories {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/user_stores/{storeID}/categories/{categoryID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/store_categories/{storeID}/data/{categoryID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/store_categories/{storeID}/data/{categoryID}/subcategories {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/store_categories/{storeID}/data/{categoryID}/subcategories/{subCatID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/store_metrics/{storeCumMetricID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/store_subcategories/{storeID}/data/{categoryID}/data/{subcategoryID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/users_addresses/{userID}/data/{addressID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/users_meta/{userID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/users_meta/{userID}/orders/{orderNodeID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/users_meta/{userID}/stores/{storeNodeID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/users_meta/{userID}/productRatings/{productRatingID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/users_meta/{userID}/productReviews/{productReviewID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/products/{storeID}/store_products/{productId}/reviews {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/products/{storeID}/store_products/{productId}/reviews/{reviewID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/users_meta/{userID}/storeRatings/{storeRatingID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/users_meta/{userID}/storeReviews/{storeReviewID} {
+      allow read: if true;
+      allow write: if true;
+    }
+    match /{nodeEnv}/data/store_payments/{storeID} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/store_links/{linkid} {
+      allow read: if true;
+      allow write: if true;
+    }
+     match /{nodeEnv}/data/store_links_map/{actual_link} {
+      allow read: if true;
+      allow write: if true;
+    } 
+    match /{nodeEnv}/data/notifications/{notificationsId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

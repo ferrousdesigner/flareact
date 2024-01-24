@@ -1,0 +1,8 @@
+.shipping-delivery-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shipping-delivery-content {
+padding: 10px;
+}

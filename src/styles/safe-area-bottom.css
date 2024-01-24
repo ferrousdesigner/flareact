@@ -1,0 +1,9 @@
+.safe-area-bottom {
+	height: 25px;
+	position: fixed;
+	z-index: 4;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--main-background-color);
+}

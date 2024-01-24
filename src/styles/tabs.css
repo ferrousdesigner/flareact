@@ -1,0 +1,102 @@
+.tabs-content-containers {
+  padding: 2rem 0rem;
+}
+
+.tabs {
+  /* box-shadow: 0 0 1rem var(--shadow-color); */
+  margin: 4rem 0;
+  border-radius: var(--radius);
+  padding: 1rem 0rem;
+}
+.tabs * {
+  transition: all 0.2s ease-out;
+}
+.tabs-button-container {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tab-button {
+  width: auto;
+  cursor: pointer;
+  padding: 0rem 0rem;
+  min-height: 6rem;
+  font-size: 2rem;
+  background: none;
+  color: var(--main-font-color);
+  font-weight: bold;
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  margin-right: 3rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+.tabs-v2 > .tabs-button-container .tab-button {
+  border: 3px solid transparent;
+  padding: 1rem 2rem;
+  background-color: var(--card-background);
+  border-radius: var(--radius);
+  min-height: 4.5rem;
+  margin-right: 2rem;
+}
+.tabs-v3 > .tabs-button-container .tab-button {
+  border: 3px solid transparent;
+  padding: 0rem 0;
+}
+.tabs-v2 > .tabs-button-container .tab-button.active {
+  border: 3px solid transparent;
+  background: var(--theme-color);
+  color: var(--btn-gradient-color);
+  border-color: var(--theme-color);
+}
+.tab-button:hover {
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.tab-button.active {
+  color: var(--white);
+  border-bottom: none;
+  cursor: default;
+  border-right: none;
+  color: var(--theme-color);
+  border-top: none;
+  border-bottom: 3px solid var(--theme-color);
+  /* box-shadow: var(--btn-primary-shadow); */
+}
+.tab-button.active:last-child {
+  /* border-right: 1px solid var(--border-color); */
+}
+
+.tab-button span {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.tabs-content {
+  opacity: 0;
+  height: 0;
+}
+.tabs-content.active {
+  opacity: 1;
+  height: auto;
+  animation: appear 0.5s ease-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tabs-button-container {
+    justify-content: center;
+  }
+  .tab-button {
+    min-height: 6rem;
+  }
+}

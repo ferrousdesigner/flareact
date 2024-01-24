@@ -1,0 +1,12 @@
+.safe-area-top {
+	height: 90px;
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--top-area-color);
+}
+.nav-mobile-iphone {
+  top: calc(90px - 6rem);
+}

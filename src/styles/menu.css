@@ -1,0 +1,95 @@
+.menu {
+  position: relative;
+}
+.menu .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  display: none;
+  z-index: 0;
+  /* background-color: red; */
+}
+.menu.active .background {
+  pointer-events: all;
+  display: block;
+}
+.menu-button {
+  width: 5rem;
+  border-radius: 50%;
+  height: 5rem;
+  background: var(--glass-button-color);
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: var(--neo-shadows);
+}
+.menu-button.active {
+  background: var(--glass-button-color-hover);
+}
+.menu-button > div {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: var(--radius);
+  background: var(--main-background-color);
+
+  margin: 0.3rem 0;
+  transition: all 0.15s ease-out;
+}
+.menu-button.active > div {
+  width: 3rem;
+  height: 0.3rem;
+  /* background: var(--main-font-color); */
+}
+.menu-button.active > div:first-child {
+  margin: 0;
+  transform: translateY(0.6rem) rotateZ(45deg);
+}
+.menu-button.active > div:nth-child(2) {
+  opacity: 0;
+  zoom: 0;
+}
+.menu-button.active > div:last-child {
+  margin: 0;
+  transform: translateY(-0.7rem) rotateZ(-45deg);
+}
+.menu-list-container {
+  z-index: 4;
+  position: fixed;
+  background: var(--main-background-color);
+  padding: 1rem 0;
+  bottom: 0rem;
+  max-width: 400px;
+  left: 50%;
+  transition: all 0.15s ease-in-out;
+  transform: translateX(-100%) translateY(100%) scale(0);
+  transform-origin: right top;
+  border-radius: var(--radius);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.menu-list-container.active {
+  transform: translateX(-100%) translateY(100%) scale(1);
+}
+.menu-list-container > button,
+.menu-list-container > a {
+  width: 100% !important;
+  padding: 1.5rem !important;
+  border: none;
+  background: transparent;
+  text-align: left;
+  display: flex;
+  font-size: 1.5rem;
+  color: var(--main-font-color);
+  transition: all 0.15s ease-in-out;
+}
+.menu-list-container > button:hover,
+.menu-list-container > a:hover {
+  background: var(--theme-color);
+  color: var(--white);
+}

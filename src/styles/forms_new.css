@@ -1,0 +1,35 @@
+.animated-form-menu-cell {
+  background-color: var(--card-background);
+  padding: 2rem 2rem;
+  font-size: 2.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.animated-form-menu-cell:last-child {
+  border-bottom: none;
+}
+
+.field-cell > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-cell {
+  border-bottom: none;
+  color: var(--theme-color);
+}
+
+.animated-form-menu-cell.group-cell * {
+  font-weight: bold;
+}
+.animated-form-menu-cell.field-cell {
+  padding-left: 3rem;
+}
+
+.animated-form-field {
+}
+
+.animated-form-field label {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 3rem;
+}

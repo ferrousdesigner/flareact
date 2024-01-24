@@ -1,0 +1,627 @@
+.input-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: relative;
+  font-family: var(--font-one);
+  /* margin-bottom: 5rem; */
+  transition: all 0.4s ease;
+  margin: 2rem 0;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+.MuiChip-deleteIcon {
+  font-size: 9px !important;
+  margin-right: -2px;
+}
+.simple-chip {
+  margin-right: 0.7rem !important;
+  margin-bottom: 1rem !important;
+}
+.simple-chip * {
+  font-size: 16px;
+}
+.autocomplete {
+}
+.MuiInputBase-formControl {
+  border-radius: var(--radius) !important;
+}
+.autocomplete *:not(svg) {
+  font-size: 16px !important;
+  color: var(--main-font-color);
+}
+.MuiAccordion-rounded,
+.MuiSvgIcon-root,
+.MuiInputLabel-formControl {
+  color: var(--main-font-color) !important;
+}
+/* .autocomplete * button {
+  font-size: 1rem !important;
+} */
+.input-field .btn-primary {
+  margin: 0 !important;
+  height: 7rem;
+  margin-right: 0rem !important;
+}
+.input-field + ul {
+  margin-top: -2rem;
+  margin-bottom: 5rem;
+}
+
+.input-field {
+  border: 0px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: var(--input-background);
+  position: relative;
+}
+.input-field.select {
+  /* box-shadow: 0 4px 7px rgb(0 0 0 / 7%); */
+  padding: 0 1rem;
+  padding-right: 2rem;
+  /* border: 1px solid var(--border-color); */
+}
+.input-field > label {
+  position: absolute;
+  top: -2.5rem;
+  width: auto !important;
+  left: 0rem;
+  background-color: var(--main-background-color);
+  padding: 0.5rem 1rem;
+  padding-left: 0;
+  border-radius: var(--radius);
+  transform: translateY(-50%);
+  line-height: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.input-field:focus-within > label {
+  color: var(--theme-color);
+}
+.input-field > input {
+  font-family: var(--font-one);
+  width: 100%;
+  height: 7rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  margin: 0rem 0;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--main-font-color);
+  padding: 0 0rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  /* box-shadow: 0 4px 7px rgb(0 0 0 / 7%); */
+
+  border: none;
+}
+.input-field > textarea {
+  font-family: var(--font-one);
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--main-font-color);
+  width: 100%;
+  min-height: 20rem;
+  border-radius: var(--radius);
+  border: none;
+  background-color: transparent;
+  margin-top: 0rem;
+  padding: 1.5rem 1.5rem;
+  border: none;
+  /* box-shadow: 0 4px 7px rgb(0 0 0 / 7%); */
+}
+
+.input-field > input:disabled {
+  opacity: 0.4;
+}
+.input-field > textarea:disabled {
+  opacity: 0.4;
+}
+
+.input-select-list {
+  position: absolute;
+  right: 0;
+  opacity: 1;
+  top: 0;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.input-chev {
+  position: absolute;
+  right: 1rem;
+  top: 35%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}
+.input-select-list option {
+  opacity: 0;
+}
+.input-select-list.open {
+  width: 100%;
+  opacity: 1;
+}
+.input-select-list > select {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-one);
+  height: 7rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+  font-weight: bold;
+  margin: 0rem 0;
+  font-size: 4rem;
+  cursor: pointer;
+  color: var(--main-font-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  cursor: pointer;
+  text-overflow: "";
+  height: 100%;
+}
+.input-select-list > select:focus {
+  outline: none;
+}
+select {
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  /* Edge */
+  color: var(--placeholder-color);
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--placeholder-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-color);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-field.big > input {
+  width: 100%;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  background: transparent;
+  border-radius: var(--radius);
+  font-weight: bold;
+  margin: 2rem 0;
+  font-size: 4rem;
+  cursor: pointer;
+  color: var(--main-font-color);
+  padding: 0 0rem;
+}
+.input-field.big > input:focus,
+.input-field > input:focus {
+  outline: none;
+  /* border-bottom: 0.1rem solid var(--theme-color); */
+}
+.input-field:focus-visible {
+  box-shadow: 0 0 0 0.4rem var(--main-font-color);
+}
+.input-field > textarea:focus {
+  outline: none;
+}
+.input-field > select {
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  font-family: var(--font-one);
+  width: 100%;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0rem;
+  border: none;
+  border-radius: var(--radius);
+  height: 7rem;
+  text-indent: 0rem;
+  cursor: pointer;
+  color: var(--main-font-color);
+  border: none;
+  background: transparent;
+}
+.input-field.select-small > select {
+  height: 4rem;
+  border-radius: var(--radius);
+  padding: 0rem;
+}
+
+input:focus {
+  outline: none;
+}
+.input-field {
+  border: 1px solid transparent;
+}
+.input-field > select:focus {
+  outline: none;
+}
+
+.input-field:focus-within {
+  border: 1px solid var(--theme-color) !important;
+}
+
+.error {
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  /* background: var(--theme-color); */
+  color: var(--error-font-color);
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  transform: translateY(150%);
+}
+
+.error::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 1rem;
+  width: 1rem;
+  background: var(--error-font-color);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(10);
+    opacity: 0;
+  }
+}
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.form-portfolio-image {
+  width: 100%;
+  position: relative;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+}
+.form-portfolio-image span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  border-radius: 50%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  top: 10px;
+  cursor: pointer;
+}
+.form-portfolio-image img {
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+.makeStyles-heading-2 {
+  font-size: 1.6rem !important;
+}
+.MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+
+.makeStyles-root-1 * {
+  font-family: var(--font-one) !important;
+  color: var(--main-font-color);
+  font-size: 1.6rem !important;
+}
+.MuiTypography-body1 {
+  font-size: 2rem !important;
+  font-family: var(--font-one) !important;
+}
+.MuiSvgIcon-root {
+  width: 3em !important;
+  height: 3em !important;
+}
+.MuiAccordionSummary-content .makeStyles-heading-2 {
+  color: var(--theme-color) !important;
+  font-weight: bold;
+}
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 3.4rem 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--theme-color);
+  border-radius: var(--radius);
+  border: 0.2px solid #010101;
+  border-radius: var(--radius);
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: none;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  height: 36px;
+  width: 40px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--theme-color);
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--theme-color);
+  border-radius: var(--radius);
+  border: 0.2px solid #010101;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: none;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  height: 36px;
+  width: 40px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: var(--theme-color);
+  border: 0.2px solid #010101;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+input[type="range"]::-ms-fill-upper {
+  background: var(--theme-color);
+  border: 0.2px solid #010101;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+input[type="range"]::-ms-thumb {
+  box-shadow: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: var(--theme-color);
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: var(--theme-color);
+}
+
+.selecter {
+  display: block;
+  margin-bottom: 1rem;
+}
+.selecter .fas {
+  font-size: 3rem;
+}
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  width: 100%;
+  margin: 0 3rem;
+}
+.PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.PhoneInputCountryIcon--border {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+.PhoneInputCountrySelect option {
+  font-size: 3rem;
+}
+.PhoneInputCountrySelect:focus {
+  outline: none;
+  box-shadow: none;
+}
+.PhoneInputCountryIcon {
+  border: none;
+  height: 100%;
+}
+.PhoneInputInput {
+  border: none;
+  background-color: transparent;
+}
+.PrivateSwitchBase-root * {
+  color: var(--main-font-color) !important;
+  fill: var(--main-font-color) !important;
+}
+.PhoneInputInput {
+  color: var(--main-font-color);
+}
+.PhoneInputInput {
+  border: none;
+  height: 5rem;
+  font-size: 2rem;
+}
+.color-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(100%);
+  padding: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.color-card-color {
+  width: 100%;
+  border-radius: var(--radius);
+  height: 20rem;
+}
+.input-range {
+  margin-bottom: 3rem !important;
+}
+.input-range__label {
+  font-size: 2rem !important;
+  font-family: var(--font-one) !important;
+}
+.input-range__track {
+  height: 1rem !important;
+}
+.input-range__label--min,
+.input-range__label--max {
+  bottom: -4.4rem !important;
+}
+.input-range__label--max {
+  right: 3rem !important;
+}
+.input-range__label--min {
+  left: 2.3rem !important;
+}
+.input-range__label--value {
+  top: -4.8rem !important;
+  color: var(--theme-color) !important;
+}
+.input-range__slider {
+  background-color: var(--main-background-color) !important;
+  border: none !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  box-shadow: 0 1rem 1rem var(--shadow-color) !important;
+  margin-top: -2rem !important;
+}
+.input-range__track--active {
+  background: var(--theme-color) !important;
+}
+.MuiCheckbox-root {
+  padding: 0 !important;
+  padding-right: 1rem !important;
+}
+
+.checkbox-component .MuiFormControlLabel-label {
+  font-size: 2.5rem !important;
+  margin-top: 0rem;
+}
+.MuiFormControlLabel-label a {
+  text-decoration: underline;
+}
+.label-desc {
+  font-weight: normal;
+  color: var(--PhoneInputCountryFlag-borderColor);
+  margin-left: 0rem;
+}
+.input-field-icon {
+  position: absolute;
+  font-size: 3rem;
+  right: 15rem;
+}
+@media only screen and (max-width: 400px) {
+  .input-field-icon {
+    right: 24rem;
+  }
+
+  .MuiCheckbox-root svg {
+    font-size: 2.5rem !important;
+  }
+  .PhoneInput {
+    height: 8rem;
+    width: 100%;
+  }
+  .input-field {
+    /* border: 2px solid var(--border-color); */
+  }
+  .input-field > *:not(.error):not(label) {
+    /* width: 100% !important;
+    height: 7rem !important;
+    font-size: 2.3rem !important;
+    text-indent: 0rem !important; */
+  }
+}

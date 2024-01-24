@@ -1,0 +1,10 @@
+.login-container {
+  background: var(--glass-color);
+  padding: 2rem;
+  border-radius: var(--radius);
+  display: inline-block;
+}
+.login-container h5 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}

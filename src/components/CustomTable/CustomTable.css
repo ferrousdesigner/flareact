@@ -1,0 +1,52 @@
+.MuiTableCell-body,
+.MuiTableSortLabel-root,
+.MuiTypography-h6,
+.MuiTablePagination-selectLabel,
+.MuiTablePagination-select,
+.MuiTablePagination-displayedRows {
+  font-size: 1.6rem !important;
+}
+.MuiTablePagination-select {
+  padding-right: 2rem !important;
+}
+.MuiTableSortLabel-icon {
+  font-size: 1rem !important;
+}
+.MuiFormControlLabel-labelPlacementEnd {
+  margin-left: 0 !important;
+}
+
+.MuiTypography-subtitle1 {
+  font-size: 1.9rem !important;
+}
+
+.custom-table .MuiSvgIcon-root {
+  font-size: 1.2rem !important;
+}
+
+.custom-table .MuiToolbar-regular {
+  border-radius: var(--radius) !important;
+}
+.custom-table .MuiTableSortLabel-root {
+  font-weight: bolder;
+  line-height: 1.5;
+  color: var(--sub-title-color);
+}
+.MuiTableCell-root {
+  color: var(--sub-title-color) !important;
+  border-bottom: 1px solid var(--border-radius) !important;
+}
+.MuiTableCell-sizeMedium {
+  color: var(--sub-title-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .MuiTableCell-body,
+  .MuiTableSortLabel-root,
+  .MuiTypography-h6,
+  .MuiTablePagination-selectLabel,
+  .MuiTablePagination-select,
+  .MuiTablePagination-displayedRows {
+    font-size: 2rem !important;
+  }
+}

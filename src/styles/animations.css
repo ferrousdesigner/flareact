@@ -1,0 +1,81 @@
+.zoom-in {
+  /* animation: move-in-left  var(--animation-time) var(--easing) 1; */
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.zoom-out {
+  animation: zoom-out var(--animation-time) var(--easing) 1;
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+.move-in-left {
+  animation: move-in-left var(--animation-time) var(--easing) forwards;
+}
+@keyframes move-in-left {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.appear {
+  animation: appear var(--animation-time) ease-in-out forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.appear-half {
+  animation: appear-half var(--animation-time) ease-in-out forwards;
+}
+
+@keyframes appear-half {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+.fade-exit {
+  opacity: 1;
+  z-index: 0;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}

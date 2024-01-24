@@ -1,0 +1,8 @@
+.cancellation-refund-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cancellation-refund-content {
+padding: 10px;
+}

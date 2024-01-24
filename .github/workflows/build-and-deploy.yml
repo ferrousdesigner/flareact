@@ -1,0 +1,68 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  build-and-deploy-main:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps --no-warnings
+
+      - name: Build Flareact App
+        run: npm run build --legacy-peer-deps --no-warnings
+
+      - name: Install Firebase tools
+        run: npm install -g firebase-tools@12 --legacy-peer-deps --no-warnings
+
+      - name: Deploy to Firebase Hosting
+        run:
+          firebase deploy --except functions --token "${{
+          secrets.FIREBASE_SERVICE_ACCOUNT_SECRET }}"
+        env:
+          FIREBASE_SERVICE_ACCOUNT_SECRET:
+            ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SECRET }}
+
+  build-and-deploy-staging:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/staging'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps --no-warnings
+
+      - name: Build Flareact App
+        run: npm run build --legacy-peer-deps --no-warnings
+
+      - name: Install Firebase tools
+        run: npm install -g firebase-tools@12 --legacy-peer-deps --no-warnings
+
+      - name: Deploy to Firebase Hosting (Staging)
+        run:
+          firebase hosting:channel:deploy --expires 30m flareact-staging --token
+          "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SECRET }}"
+        env:
+          FIREBASE_SERVICE_ACCOUNT_SECRET:
+            ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SECRET }}

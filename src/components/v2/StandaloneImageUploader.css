@@ -1,0 +1,39 @@
+.standalone-uploader {
+  padding: 1rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  position: relative;
+  padding-bottom: 0;
+}
+.standalone-error,
+.standalone-error label {
+  border-color: var(--error-font-color);
+  color: var(--error-font-color);
+}
+.standalone-uploader .image-item__btn-wrapper {
+  margin-top: 2rem;
+}
+.standalone-uploader .image-item img {
+  width: auto;
+  height: 200px;
+}
+
+.standalone-uploader > label {
+  position: absolute;
+  top: -1px;
+  width: auto !important;
+  left: -8px;
+  background-color: var(--main-background-color);
+  padding: 2.5rem 1rem;
+  border-radius: var(--radius);
+  transform: translateY(-50%);
+  line-height: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 766px) {
+  .standalone-uploader {
+    border: 2px solid var(--border-color);
+  }
+}

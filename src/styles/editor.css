@@ -1,0 +1,14 @@
+.ce-paragraph{ 
+  line-height: 1.5;
+  outline: none;
+  font-size: 16px;
+}
+.ce-toolbar__actions {
+  top: 0;
+}
+.cdx-block {
+  padding: 2px 0;
+}
+.ce-block__content {
+  margin: 0;
+}

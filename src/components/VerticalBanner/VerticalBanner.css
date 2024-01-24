@@ -1,0 +1,22 @@
+.vertical-banner {
+  padding: 5rem;
+  margin-top: 3rem;
+  border-radius: 0rem;
+  background-color: var(--input-background);
+}
+
+.vertical-banner-top-img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 3rem;
+  user-select: none;
+}
+
+.vertical-banner-bottom-img {
+  user-select: none;
+  object-fit: cover;
+  border-radius: var(--radius);
+  width: 100%;
+  margin-top: 4rem;
+}

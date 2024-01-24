@@ -1,0 +1,103 @@
+.how-it-works-container {
+}
+
+.how-it-works-subhead {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #3d4c5b;
+}
+
+.how-it-works-data-container {
+  position: relative;
+}
+
+.how-it-works-image-container {
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.how-it-works-image {
+  height: 130px;
+  background-size: cover;
+  width: 130px;
+  /* border: 1px solid #dddddd; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 31px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.how-it-works-data-container::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translateX(3px) translateY(0%);
+  background: #cfd4db;
+  width: 4px;
+  height: 100%;
+  z-index: -1;
+}
+
+.how-it-works-feature {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.how-it-works-feature::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-10px) translateY(-50%);
+  background: #0051a2;
+  width: 30px;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 50%;
+  border: 10px solid #ffff;
+}
+
+.how-it-works-data {
+  padding: 1rem 2rem;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.how-it-works-head {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #102b48;
+  font-weight: bold;
+}
+
+.how-it-works-desc {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.how-it-works-container {
+  padding-left: 1rem;
+}
+.how-it-works-data {
+  text-align: left;
+}
+.jumbotron-data {
+  padding: 2rem !important;
+}
+.how-it-works-feature::after {
+  left: 0%;
+}
+.how-it-works-data-container::after {
+  left: 0%;
+}
+.how-it-works-image-container {
+  justify-content: flex-start !important;
+}

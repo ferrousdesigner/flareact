@@ -1,0 +1,13 @@
+.toggle-item .fas {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+.toggle-item {
+  cursor: pointer;
+}
+.toggle-item h3 {
+  font-weight: normal;
+}
+.toggle-item .on .fas {
+  color: var(--theme-color);
+}

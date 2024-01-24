@@ -1,0 +1,31 @@
+.toggle {
+  width: 8rem;
+  height: 4rem;
+  background: var(--toggle-background) !important;
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  position: relative;
+  transition: all 0.2s ease-out;
+  border: none;
+  cursor: pointer;
+}
+.toggle > div {
+  width: 4rem;
+  height: 4rem;
+  background: var(--toggle-background-nob) !important;
+  border-radius: var(--radius);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0px 10px var(--shadow-color);
+  transition: all 0.2s ease-out;
+  margin-left: 0;
+}
+.toggle.active > div {
+  transform: translateY(-50%) translateX(100%);
+  background: var(--main-background-color) !important;
+}
+.toggle.active {
+  background: var(--theme-color) !important;
+}

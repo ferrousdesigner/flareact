@@ -1,0 +1,74 @@
+.icon-menu-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 103;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+.icon-menu-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dialog-background);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+.icon-menu-list {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--card-background);
+  width: 100%;
+  max-height: 40vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+  border-radius: var(--radius);
+}
+.icon-menu-list button {
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+  padding: 2rem 3rem;
+  border: none;
+  color: var(--main-font-color);
+}
+.icon-menu-list .head {
+  font-size: 2.4rem;
+  color: var(--theme-color);
+  padding: 3rem 3rem 2.5rem 3rem;
+  width: 100%;
+  font-family: var(--font-one);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.icon-menu-list button.cancel {
+  margin-top: 2rem;
+  border: none;
+  margin-bottom: 4rem;
+}
+.icon-menu-container .icon-menu-list {
+  transform: translateY(100%);
+}
+.icon-menu-container {
+}
+.icon-menu-container.icon-menu-open .icon-menu-overlay {
+  opacity: 1;
+}
+.icon-menu-container.icon-menu-open {
+  pointer-events: all;
+  transform: translateY(0%);
+}
+
+.icon-menu-container.icon-menu-open .icon-menu-list {
+  transform: translateY(0);
+}

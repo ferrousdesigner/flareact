@@ -1,0 +1,125 @@
+.dual-section-container {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-position-y: 20%;
+}
+.dual-section-container > div > div{
+  min-height: 70vh;
+
+}
+.dual-section {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  padding-top: 10rem;
+}
+.dual-section.quest {
+  height: 75rem;
+  margin-bottom: 10rem;
+}
+.dual-section > .image {
+  background-size: cover;
+  background-position: center;
+}
+.dual-section > div {
+  height: 100%;
+}
+.black-back {
+  background: var(--black);
+}
+.white-back {
+  background: var(--white);
+}
+.dual-section .content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dual-section .content.less-padding {
+  padding-top: 5rem;
+  padding-bottom: 0;
+}
+.hide-image {
+  display: none;
+}
+
+.landing-page-hero-image {
+  height: 50vw;
+  background-position: center;
+  background-size: cover;
+  width: 50vw;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  transform: translateX(-30%);
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  .dual-section:first-child {
+    /* margin-top: 6rem; */
+    min-height: 88vh;
+  }
+  .dual-section > .image {
+    height: 50rem;
+    height: calc(100vmax - 20rem);
+  }
+  .dual-section > .image.quest {
+    height: 50rem;
+    margin-top: 0rem;
+  }
+  .dual-section {
+    padding: 5rem 0;
+  }
+  .dual-section .content {
+    padding: 3rem 0;
+  }
+  .dual-section.quest {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .xl-size {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  .dual-section-container {
+    min-height: 100vh;
+  }
+  .dual-section {
+    height: auto;
+  }
+  .dual-section > .image {
+    height: 30vmax;
+  }
+  .dual-section > .image.quest:first-child {
+    display: block;
+  }
+  .dual-section > .image.quest:last-child {
+    display: none;
+  }
+  /* .dual-section > .image.hide-image {
+		display: block;
+	}
+	.dual-section > .image.show-image {
+		display: none;
+	} */
+  .dual-section {
+    margin-top: 0;
+  }
+
+  .show-image {
+    /* display: none; */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+   .xl-size {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}

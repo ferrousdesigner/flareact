@@ -1,0 +1,191 @@
+.dialog {
+  width: 100%;
+  height: 100vh;
+  background: var(--dialog-background);
+  position: fixed;
+  bottom: 0;
+  z-index: 101;
+  left: 0;
+  display: none;
+  justify-content: center;
+  transition: all 0.5s ease;
+  align-items: center;
+  backdrop-filter: blur(4rem);
+}
+.dialog.open {
+  display: flex;
+}
+
+.dialog-close {
+  position: fixed;
+  right: 2rem;
+  bottom: 11rem;
+  background: none;
+  border: none;
+  z-index: 111;
+  font-size: 3rem;
+  transform: translateY(-70%);
+  /* opacity: 0.3; */
+  color: #000000;
+  width: 8rem;
+  height: 8rem;
+  color: var(--theme-color);
+  background-color: var(--card-background);
+}
+.dialog-content > button {
+  font-size: 2rem;
+  border: transparent;
+  color: var(--main-font-color);
+  background-color: var(--main-background-color);
+  position: absolute;
+  /* bottom: 0; */
+  right: 2rem;
+  cursor: pointer;
+  opacity: 0.3;
+  top: 1.5rem;
+  box-shadow: none;
+  background: transparent;
+  /* -webkit-transform: translateX(-70%) translateY(-70%); */
+  transform: translateX(0) translateY(0);
+}
+
+.dialog.open > .dialog-content {
+  width: 60rem;
+  height: auto;
+  padding: 4rem;
+  background-color: var(--main-background-color);
+  position: relative;
+  z-index: 4;
+  margin-top: -3rem;
+  border-radius: var(--radius);
+  box-shadow: 0.5rem 0.5rem 3.2rem var(--shadow-color);
+  animation: slide-from-bottom 0.5s ease forwards;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+.dialog.right {
+  justify-content: flex-end;
+  top: 0;
+  bottom: unset;
+}
+.dialog.right > .dialog-content {
+  width: 50vw;
+  height: 102vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: var(--radius);
+  animation: slide-from-right 0.5s ease forwards;
+
+  padding: 4rem;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+.dialog.big.open > .dialog-content {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 5% 9rem 0rem;
+  background-color: var(--main-background-color);
+  position: relative;
+  z-index: 4;
+  margin-top: 0rem;
+  box-shadow: 0;
+  border-radius: var(--radius);
+  animation: slide-from-bottom 0.2s ease-out forwards;
+}
+.dialog.big.open .dialog-content > button {
+  transform: none;
+  right: 6rem;
+  top: 6rem;
+  font-size: 4rem;
+}
+.right .dialog-content > button {
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
+  font-size: 3rem;
+  background: var(--card-background);
+  width: 6rem;
+  height: 6rem;
+  color: var(--main-font-color);
+  border-radius: 50%;
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .dialog {
+    width: 95% !important;
+    left: 2.5% !important;
+  }
+  /* .dialog.big.open > .dialog-content {
+    min-height: 94vh;
+    max-height: 94vh;
+  } */
+  .dialog.big.open > .dialog-content {
+    padding: 10% 3rem 0rem;
+  }
+  .dialog.open > .dialog-content {
+    width: calc(80%);
+    margin-top: 0;
+    bottom: 0;
+    padding: 3rem;
+
+    padding-bottom: 5rem;
+  }
+  .dialog-content > button {
+    position: absolute !important;
+    /* bottom: 0; */
+    right: 3rem !important;
+    top: 2rem !important;
+    font-size: 3rem !important;
+    box-shadow: none;
+    background: transparent;
+    /* -webkit-transform: translateX(-70%) translateY(-70%); */
+    transform: translateX(0) translateY(0);
+  }
+}
+.dialog-content .dialog-header {
+  position: sticky;
+  top: 0rem;
+  backdrop-filter: blur(5px);
+}
+@media only screen and (max-width: 400px) {
+  .dialog.open > .dialog-content,
+  .dialog.big.open > .dialog-content {
+    width: 100%;
+    margin-top: 0;
+    bottom: 0;
+    padding: 3rem;
+    border-radius: var(--radius);
+    padding-bottom: 3rem;
+    max-height: 100%;
+    padding-top: 5rem;
+    overflow-y: auto;
+  }
+  .dialog.big.open .dialog-content > button {
+    right: 2rem;
+    top: 1rem;
+    font-size: 3rem;
+  }
+  .dialog.big.open > .dialog-content {
+    padding: 10% 2rem 0rem;
+    width: 100%;
+  }
+}

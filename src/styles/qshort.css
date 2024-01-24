@@ -1,0 +1,94 @@
+.qshort {
+	width: 100%;
+	margin: 5rem 0;
+}
+
+.qshort > .image {
+	background-size: cover;
+	background-position: center;
+}
+.qshort > div {
+	display: inline-block;
+}
+.qshort .content.less-padding {
+	padding-top: 5rem;
+	padding-bottom: 0;
+}
+
+.qshort > .image , .qshort > .content {
+	width: 50vw;
+	height: 50vw;
+	vertical-align: middle;
+	position: relative;
+}
+.qshort > .image.hide-image {
+	display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.qshort > .image {
+	
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.qshort > .image {
+		width: 40vw;
+		height: 45vw;
+		margin: 0 auto;
+		display: inline-block;
+	}
+	.qshort > .content {
+		width: 53vw;
+		height: 45vw;
+		margin: 0 auto;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.qshort > .image {
+		width: 90vw;
+		margin: 0 auto;
+		display: block;
+		height: 90vw;
+		vertical-align: middle;
+		position: relative;
+	}
+	.qshort > .content {
+		width: 90vw;
+		margin: 0 auto;
+		display: block;
+		height: calc(55vmax);
+		vertical-align: middle;
+		position: relative;
+	}
+	.qshort > .content.no-answer {
+		height: 50vh;
+	}
+	
+	.qshort > .image.hide-image {
+		display: block;
+	}
+	.qshort > .image.show-image {
+		display: block;
+	}
+	.qshort > .image:first-child {
+		display: block;
+	}
+	.qshort > .image:last-child {
+		display: none;
+	}
+	.qshort {
+		margin: 2rem 0;
+	}
+	.show-image {
+		/* display: none; */
+	}
+}
+@media only screen and (max-width: 480px) {
+	.qshort > .content {
+		height: calc(100vmax - 6rem);
+	}
+}

@@ -1,0 +1,69 @@
+.no-record {
+  font-size: 2.5rem;
+  font-weight: normal !important;
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.no-record button {
+  margin-top: 2rem !important;
+}
+
+.no-record-card {
+  font-size: 4rem;
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.no-record-card .icon {
+  font-size: 30rem;
+  background-color: var(--nav-btn);
+  border-radius: 50%;
+  color: var(--main-font-color);
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  opacity: 0.3;
+  display: block;
+  text-align: left;
+  height: 40rem;
+  width: 40rem;
+}
+.no-record-card-msg {
+  margin-bottom: 3rem;
+}
+.no-record-general-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.no-record-general {
+  background: var(--card-background);
+  padding: 4rem;
+  width: 100%;
+  border-radius: var(--radius);
+}
+@media only screen and (max-width: 766px) {
+  .no-record-general img {
+  margin-bottom: 3rem !important;
+}
+  .no-record-card {
+    font-size: 3rem;
+  }
+  .no-record-card div {
+    margin-bottom: 2rem;
+  }
+  .no-record-card .icon {
+    font-size: 15rem;
+    background-color: var(--nav-btn);
+    border-radius: 50%;
+    color: var(--main-font-color);
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    display: block;
+    opacity: 0.3;
+    text-align: left;
+    height: 20rem;
+    width: 20rem;
+  }
+}

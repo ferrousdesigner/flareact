@@ -1,0 +1,16 @@
+.react-swipeable-view-container {
+  padding-bottom: 3rem;
+}
+
+.react-swipeable-view-container > div > div {
+  height: 100%;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.answer-card {
+  background: var(--main-background-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+.highlight {
+  margin: 2rem 0 0;
+  /* border: 1px solid var(--border-color); */
+  border-radius: var(--radius);
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.highlight a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.highlight-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.highlight-default {
+  background-color: var(--card-background-blue);
+}
+.highlight-default .highlight-icon {
+  color: var(--blue);
+}
+
+.highlight-danger {
+  background-color: var(--card-background-red);
+}
+.highlight-danger .highlight-icon {
+  color: var(--red);
+}
+
+.highlight-success {
+  background-color: var(--card-background-green);
+}
+.highlight-success .highlight-icon {
+  color: var(--green);
+}
+.highlight-warn {
+  background-color: var(--card-background-orange);
+}
+.highlight-warn .highlight-icon {
+  color: var(--orange);
+}
+
+@media only screen and (max-width: 768px) {
+  .highlight {
+    font-size: 2.5rem;
+  }
+}

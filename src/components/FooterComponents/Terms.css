@@ -1,0 +1,8 @@
+.terms-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms-content {
+padding: 10px;
+}

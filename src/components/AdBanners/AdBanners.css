@@ -1,0 +1,58 @@
+.ad-banner {
+  padding: 3rem;
+  margin-top: 3rem;
+  border-radius: var(--radius);
+  background-color: var(--card-background-red);
+  border: 1px solid #ffcbcb;
+}
+
+.ad-banner-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+.ad-banner-big-red-box {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 5rem #8300002b;
+  /* background-color: #ff000000; */
+  border: 1px solid #ffcbcb;
+}
+
+.ad-banner-big-red-box .icon {
+  position: absolute;
+  right: 2rem;
+  text-align: right;
+  top: 2rem;
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+  color: #ff00001c;
+  /* filter: blur(25px); */
+  font-size: 9rem;
+  z-index: -7;
+}
+.ad-banner-big-red-box > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--error-font-color);
+}
+
+.ad-banner-bar .header {
+  width: auto;
+}
+
+.ad-banner-bar .ad-banner-big-red-box {
+  width: 60%;
+}
+.ad-banner-small {
+  max-width: 300px;
+}

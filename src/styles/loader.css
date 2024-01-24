@@ -1,0 +1,7 @@
+.MuiCircularProgress-circle {
+  stroke: var(--loader-color) !important;
+}
+
+.MuiSkeleton-pulse {
+  background-color: var(--skeleton-color) !important;
+}

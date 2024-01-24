@@ -1,0 +1,12 @@
+.policies-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policies-content {
+  padding: 10px;
+}
+
+.policies-container p {
+  margin: 3rem 0;
+}

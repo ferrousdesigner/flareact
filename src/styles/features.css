@@ -1,0 +1,28 @@
+.features {
+	background: var(--theme-color);
+	padding: 15rem 0;
+	position: relative;
+	z-index: 2;
+}
+.features-two {
+	background: var(--main-background-color);
+}
+.features * {
+	color: white;
+}
+.feature-col {
+	padding: 0 3rem;
+}
+.features-two * {
+	color: var(--theme-color);
+}
+
+@media only screen and (max-width: 768px) {
+	.features {
+		background: var(--theme-color);
+		padding: 5rem 0;
+	}
+	.feature-col {
+		padding: 2rem 3rem;
+	}
+}

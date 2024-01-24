@@ -1,0 +1,37 @@
+.quick-link-wrapper {
+  /* margin: 1rem 0; */
+}
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  width: 13rem;
+  border: 1px solid var(--main-font-color);
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1re;
+  text-align: center;
+}
+.quick-link:active {
+  color: var(--header-color);
+}
+
+.quick-link-icon {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+  margin-bottom: 2rem;
+  color: var(--theme-color);
+}
+.quick-link-label {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .quick-link {
+    width: calc(25% - 2rem);
+  }
+  .quick-link:nth-child(4n) {
+  }
+}
