@@ -113,9 +113,7 @@ export const Image = ({ img, right }) => {
           src={img}
           alt=''
         />
-      ) : (
-        getSVG("shop_one", null, null, true)
-      )}
+      ) : null}
     </Col>
   )
 }

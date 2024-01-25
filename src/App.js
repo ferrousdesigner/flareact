@@ -156,7 +156,7 @@ function App() {
       {appBusy && <AppBusyLoader message={busyMessage} />}
       <Notifier />
       <Router>
-        <div className={appBusy ? "App app-busy" : "App"}>
+        <div className={appBusy ? "app app-busy" : "app"}>
           <Route component={Nav} />
           <Route component={BigBannerTitle} />
           <Route component={Alert} />

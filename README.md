@@ -6,9 +6,10 @@ Flareact is a firebase & react starter kit also known as boilterplate.
 
 - Various React UI components included (Button, Card, Jumbotron, Expander etc)
 - Firebase PowerComponents (Collection Renderer, Doc Renderer)
-- Infinite Scroll in-built.
-- Navigation implemented.
+- Infinite scroll in-built.
+- Navigation implemented with React-Router.
 - Basic product pages like About us, policies and terms includes.
+- EmailJS, Push Notification configured.
 
 ## Installation
 
@@ -19,9 +20,9 @@ Just update the config files mentioned below to get started.
 2. Copy firebase config and update the details in the files below: a.
    firebaseConfig in config.js
 3. Update app name, app id as per your project in the config file.
-4. In the public folder icons with your project icon.
+4. In the public folder replace icons with your project icons.
 5. Update manifest.json in public folder.
-6. Update package.json > name to your project name.
+6. Update name field in package.json to your project name.
 
 ```bash
 # Start Dev Server

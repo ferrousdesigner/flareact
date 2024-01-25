@@ -205,11 +205,6 @@ function Nav() {
               <Link to='/' style={{ marginLeft: 0 }}>
                 <img className='header__logo' src={logo} alt='ss' />
               </Link>
-              {userMeta?.seller && (
-                <Link to='/seller_profile' style={{ marginLeft: 0 }}>
-                  <span className='seller-tag'>Seller</span>
-                </Link>
-              )}
             </div>
           )}
           {!isLarge && !isSearchOpen && false && (
@@ -266,19 +261,6 @@ function Nav() {
                     iconClass: "fas fa-home",
                     to: "/",
                     activeOn: window.location.pathname === "/",
-                  },
-                  {
-                    label: "Documentation",
-                    iconClass: "fas fa-book",
-                    onClick: () => setIsOpen(true),
-                    hidden: isLarge,
-                    activeOn: isSearchOpen,
-                  },
-                  {
-                    label: "Account",
-                    iconClass: user ? "fas fa-user-check" : "fas fa-user",
-                    onClick: () => viewAccount(user, history),
-                    activeOn: window.location.pathname === "/account",
                   },
                   {
                     label: "More",

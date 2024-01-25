@@ -19,7 +19,7 @@
 .flex.btw {
   justify-content: space-between;
 }
-.App {
+.app {
   transition: all 0.3s ease;
 }
 .app-loader {

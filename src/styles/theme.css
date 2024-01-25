@@ -30,7 +30,7 @@ html {
   --animation-time: 0.5s;
   --font-one: "Open Sans", sans-serif;
   --font-two: "Montserrat Condensed", sans-serif;
-  --radius: 0rem;
+  --radius: 2rem;
   --button-height: 6rem;
   --transition: all 0.5s ease;
   --PhoneInputCountryFlag-height: 3rem;
@@ -188,7 +188,7 @@ p {
   --card-icon-background: #66666622;
   --dialog-background: #f7f7f7aa;
   --input-color: #66666622;
-  --border-color: #ddd;
+  --border-color: #ede8f2;
   --glass-color: #ffffff88;
   --glass-button-color: #11111155;
   --glass-button-color-hover: #11111188;
