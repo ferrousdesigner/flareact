@@ -1,5 +1,6 @@
 {
   "name": "flareact-starter",
+  "homepage": "https://ferrousdesigner.github.io/flareact",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -116,7 +117,9 @@
     "deploy": "CI=false npm run build && firebase deploy --except functions",
     "deployAll": "CI=false npm run build && firebase deploy",
     "deployFunctions": "firebase deploy --only functions ",
-    "deployRules": "firebase deploy --only firestore"
+    "deployRules": "firebase deploy --only firestore",
+    "predeploy": "npm run build",
+    "ghDeploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -144,5 +147,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

@@ -181,11 +181,7 @@
     transform: translateX(0) translateY(0);
   }
 }
-.dialog-content .dialog-header {
-  position: sticky;
-  top: 0rem;
-  backdrop-filter: blur(5px);
-}
+
 @media only screen and (max-width: 400px) {
   .dialog.open > .dialog-content,
   .dialog.big.open > .dialog-content {
