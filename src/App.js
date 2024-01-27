@@ -20,14 +20,10 @@ import AboutUs from "./components/FooterComponents/AboutUs"
 import PullRefresh from "./PullRefresh"
 import ReactTooltip from "react-tooltip"
 import Header from "./components/Header"
-import Loader from "./components/Loader"
 import Nav from "./components/Nav/Nav"
 import FlareactHome from "./FlareactHome"
 
 const AppBusyLoader = () => {
-  let darkThemed = document.querySelector(".theme-dark")
-  let filterColor = "none"
-  if (darkThemed) filterColor = "invert(1)"
   return (
     <div className='app-loader'>
       <div>
@@ -35,9 +31,9 @@ const AppBusyLoader = () => {
           src={logo}
           width={200}
           alt='logo'
-          style={{ marginBottom: 10, filter: filterColor }}
+          style={{ marginBottom: 10 }}
+          className='loader-animate'
         />
-        <Loader />
       </div>
     </div>
   )
@@ -157,12 +153,16 @@ function App() {
       <Notifier />
       <Router>
         <div className={appBusy ? "app app-busy" : "app"}>
-          <Route component={Nav} />
+          <Route component={() => <Nav transparent />} />
           <Route component={BigBannerTitle} />
           <Route component={Alert} />
           <Switch>
-            <PullToRefreshRoute path='/' component={FlareactHome} />
+            <Route path='/' component={FlareactHome} />
             <Route path='/components' component={DisplayComponents} />
+            <PullToRefreshRoute
+              path='/pull_to_refresh'
+              component={() => <div />}
+            />
             <Route path='/about_us' component={AboutUs} />
             <Route path='/policies' component={Policies} />
             <Route path='/terms' component={Terms} />

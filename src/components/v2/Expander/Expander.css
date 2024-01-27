@@ -1,3 +1,6 @@
+.expander {
+  border-bottom: 1px solid var(--border-color);
+}
 .expander-header {
   display: flex;
   justify-content: space-between;
@@ -32,7 +35,7 @@
   margin-bottom: 0rem;
 }
 
-.expander-header .btn-small.btn-circle{
+.expander-header .btn-small.btn-circle {
   height: 5rem !important;
   width: 5rem !important;
   margin-bottom: 1rem;

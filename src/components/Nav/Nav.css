@@ -4,7 +4,6 @@
   padding: 2.5rem 2rem;
   box-sizing: border-box;
   align-items: center;
-  backdrop-filter: blur(20px);
   background-color: var(--nav-color);
   position: sticky;
   top: 0;
@@ -74,8 +73,27 @@ a {
 .header__logo {
   width: 5rem;
   object-fit: contain;
-  filter: var(--filter);
   margin: 0 0px;
+}
+
+.loader-animate {
+  animation: loader-animate 1.2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes loader-animate {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
 }
 
 .header__search-container {

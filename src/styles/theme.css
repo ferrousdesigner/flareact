@@ -7,7 +7,7 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
 :root {
   font-size: 8px;
@@ -33,6 +33,7 @@ html {
   --radius: 2rem;
   --button-height: 6rem;
   --transition: all 0.5s ease;
+  --small-transition: all 0.2s ease;
   --PhoneInputCountryFlag-height: 3rem;
   --PhoneInputCountrySelectArrow-width: 1rem;
 }
@@ -79,7 +80,7 @@ p {
   --header-color: #f5f5f5;
   --main-background-color: #0a0d0f;
   --card-icon-background: #333;
-  --dialog-background: #1d2227aa;
+  --dialog-background: #1d2227dd;
   --input-color: #555;
   --glass-color: #00000088;
   --border-color: #2a2c2d;
@@ -158,7 +159,6 @@ p {
   --iphone-frame-shadows: 20px 20px 50px #090909, -20px -20px 50px #3a3a3a;
   --iphone-notch-color: #414141;
   --btn-primary-shadow: 0 5px 20px 10px #fe97003b;
-  --filter: grayscale(1) brightness(1) invert(1);
   --loader-color: #ffffff;
 }
 
@@ -176,7 +176,6 @@ p {
   --nav-color: #ffffffee;
   --btn-gradient-color: #fff;
   --btn-gradient: #222;
-  /* --filter: grayscale(1) brightness(0.5); */
   --jumbo-background: #f7f7f7;
   --jumbo-background-blur: #f7f7f7ff;
   --overlay-color: #eeeeee55;
@@ -186,7 +185,7 @@ p {
   --header-color: #333333;
   --main-background-color: #fff;
   --card-icon-background: #66666622;
-  --dialog-background: #f7f7f7aa;
+  --dialog-background: #000000aa;
   --input-color: #66666622;
   --border-color: #ede8f2;
   --glass-color: #ffffff88;
@@ -197,7 +196,7 @@ p {
   --placeholder-color: #aaa;
   --card-color: #fff;
   --card-color-2: #f5f5f5;
-  --card-shadow-color: #fff;
+  --card-shadow: 0 2px 1rem #eeeeee;
   --toggle-background: #e5e5e5;
   --toggle-background-nob: #bbbbbb;
   --button-font-color: #888;
@@ -235,7 +234,7 @@ p {
     0rem -0rem 0rem var(--card-shadow-color),
     0.1rem 0.1rem 0.1rem var(--shadow-color) inset,
     -0.1rem -0.1rem 0.1rem var(--card-shadow-color) inset;
-  --card-background: #f7f7f7;
+  --card-background: #fff;
   --card-background-green: #cafed2;
   --card-background-blue: #dfedff;
   --card-background-purple: #c8c9ff;

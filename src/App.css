@@ -24,7 +24,7 @@
 }
 .app-loader {
   position: fixed;
-  backdrop-filter: blur(10rem);
+  background-color: var(--main-background-color);
   left: 0;
   top: 0;
   width: 100vw;

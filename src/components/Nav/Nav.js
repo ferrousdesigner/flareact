@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
 import moment from "moment"
 import React, { Fragment, useEffect, useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { canShowMenu, isDev, isMobile } from "../../GeneralFunctions"
 import { useStateValue } from "../../StateProvider"
-import DevPanel from "../DevPanel"
-import PWAinstall from "../PWA/PWAinstall"
 import { auth } from "../../firebaseSetting"
 import logo from "../../images/Icon.png"
 import "../../styles/theme.css"
+import DevPanel from "../DevPanel"
+import PWAinstall from "../PWA/PWAinstall"
 import "./Nav.css"
 import NavItem from "./NavItem"
 import NavItemContainer from "./NavItemContainer"
@@ -17,9 +18,8 @@ const SquareIcon = logo
 const toggleTheme = () =>
   localStorage.getItem("theme") === "dark" ? "light" : "dark"
 
-function Nav() {
-  const [{ currentStore, user, userMeta, shouldSearchOpen }, dispatch] =
-    useStateValue()
+function Nav({ transparent }) {
+  const [{ user, shouldSearchOpen }, dispatch] = useStateValue()
   const [themeIcon, setIcon] = useState(
     localStorage.getItem("theme") === "dark" ? "fas fa-moon" : "fas fa-sun",
   )
@@ -33,18 +33,6 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState()
   const isLarge = window.innerWidth > 766
   let canBack = window.location.pathname !== "/"
-  const viewAccount = (user, history) => {
-    if (user) {
-      history.push("/account")
-    } else {
-      history.push({
-        pathname: "/login",
-        state: {
-          goBack: "account",
-        },
-      })
-    }
-  }
   let lastScrollTop = 0
 
   const handleScroll = () => {
@@ -124,7 +112,6 @@ function Nav() {
       history.push("/")
     }
   }
-  const { store_logo, store_name } = currentStore || {}
   // console.log('currentStore', currentStore)
   const backButton =
     !isLarge && !isSearchOpen && canBack
@@ -153,36 +140,6 @@ function Nav() {
               transition: "1s ease",
             }}
           >
-            {currentStore ? (
-              <span
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Link to='/' style={{ marginLeft: 0 }}>
-                  <img
-                    className='header__logo'
-                    src={store_logo}
-                    style={{ filter: "none" }}
-                    alt='ss'
-                  />
-                </Link>
-                <span
-                  style={{
-                    marginLeft: "2rem",
-                    fontSize: "2.6rem",
-                    fontWeight: "bold",
-                    color: "var(--white)",
-                  }}
-                >
-                  {store_name}
-                </span>
-              </span>
-            ) : (
-              ""
-            )}
             <Link to='/' style={{ marginLeft: 0 }}>
               <img
                 className='header__logo'
@@ -198,6 +155,7 @@ function Nav() {
           className='nav-header'
           style={{
             paddingBottom: isMobile ? "4rem" : "",
+            backgroundColor: transparent ? "transparent" : "",
           }}
         >
           {isLarge && (

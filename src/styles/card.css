@@ -9,7 +9,7 @@
   overflow: hidden;
   position: relative;
   z-index: 2;
-  /* box-shadow: 0 0.1rem 2rem rgb(0 0 0 / 10%); */
+  box-shadow: var(--card-shadow);
 }
 
 .card .tag {

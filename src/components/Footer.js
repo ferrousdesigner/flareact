@@ -52,7 +52,6 @@ const Footer = () => {
                 <Space lg />
                 <Link to='/' onClick={() => window.scrollTo(0, 0)}>
                   <img
-                    style={{ filter: "invert(1)" }}
                     alt=''
                     width={window.innerWidth < 766 ? 100 : 140}
                     src={logo}

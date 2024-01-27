@@ -5,7 +5,8 @@ import Space from "./components/Space"
 import Button from "./components/Button"
 import Card from "./components/Card"
 import getSVG from "./images/svgs/svg"
-import Dialog from "./components/Dialog"
+import Dialog, { DialogHeader } from "./components/Dialog"
+import Expander from "./components/v2/Expander/Expander"
 export default function FlareactHome() {
   const [dialogOpen, setDialogOpen] = useState()
   useEffect(() => {}, [])
@@ -44,7 +45,7 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("components", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 UI components
               </Header>
               <p>
@@ -52,14 +53,19 @@ export default function FlareactHome() {
                 Expander etc)
               </p>
               <Space lg />
-              <Button small accent round>
+              <Button
+                small
+                accent
+                round
+                onClick={() => setDialogOpen("ui-components")}
+              >
                 Learn More
               </Button>
             </Card>
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("list", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 Firebase components
               </Header>
               <p>
@@ -74,7 +80,7 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("infinite", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 Infinite scroll
               </Header>
               <p>
@@ -89,8 +95,8 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("email", {}, null, true)}>
-              <Header accent md bold>
-                Notifcation & Email
+              <Header md bold>
+                Notifcation & email
               </Header>
               <p>
                 Configured for sending emails with Email JS, and notify users
@@ -104,7 +110,7 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("theme", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 Theming
               </Header>
               <p>
@@ -119,8 +125,8 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("darkmode", {}, null, true)}>
-              <Header accent md bold>
-                Dark Mode
+              <Header md bold>
+                Dark mode
               </Header>
               <p>
                 Dark mode is implemented, theme of dark mode can be configured
@@ -134,7 +140,7 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("nav", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 Navigation
               </Header>
               <p>
@@ -149,7 +155,7 @@ export default function FlareactHome() {
           </Col>
           <Col xs={12} md={6}>
             <Card svgIcon={getSVG("terms", {}, null, true)}>
-              <Header accent md bold>
+              <Header md bold>
                 Secondary pages
               </Header>
               <p>
@@ -163,7 +169,35 @@ export default function FlareactHome() {
             </Card>
           </Col>
         </Row>
-        <Dialog open={dialogOpen}></Dialog>
+        <Dialog
+          closeOnOverlay
+          open={dialogOpen}
+          onClose={() => setDialogOpen()}
+        >
+          {dialogOpen === "ui-components" && (
+            <>
+              <DialogHeader>
+                <Header lg bold>
+                  UI Components
+                </Header>
+                <Header>
+                  List of UI components included in this starter kit
+                </Header>
+              </DialogHeader>
+              <Space lg />
+              <Expander title='Ad Banners'></Expander>
+              <Expander title='Bottom Menu'></Expander>
+              <Expander title='Grid'></Expander>
+              <Expander title='Row'></Expander>
+              <Expander title='Col'></Expander>
+              <Expander title='Highlight'></Expander>
+              <Expander title='Icon Menu'></Expander>
+              <Expander title='Jumbotron'></Expander>
+              <Expander title='Nav'></Expander>
+              <Expander title='Icon Menu'></Expander>
+            </>
+          )}
+        </Dialog>
       </Grid>
     </div>
   )
